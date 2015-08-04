@@ -1,0 +1,15 @@
+<div id="new-order">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 content">
+          <h2 class="title">New order</h2>
+          <%= simple_form_for @order do |f| %>
+            <%= f.input :title %>
+            <%= f.button :submit, class: "btn btn-default submit" %>
+          <% end %>
+
+          <%= link_to("Dashboard", orders_path) %>
+      </div>
+    </div>
+  </div>
+</div>
