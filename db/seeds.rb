@@ -8,4 +8,4 @@
 
 User.create!(email: 'support@fracktal.in', password: 'Fra@Works', password_confirmation: 'Fra@Works')
 Order.create!(title: 'Dheer', status: false)
-Order.create!(title: 'Mihir', status: true)
+Order.create!(title: 'Mihir', status: true, completed: DateTime.now)
