@@ -22,10 +22,7 @@
                 <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-home") + "Home", root_path %>
               <% end %>
               <%= content_tag(:li) do %>
-                <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-list") + "Dashboard", retails_path %>
-              <% end %>
-              <%= content_tag(:li) do %>
-                <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-cog") + "Manage", manage_retails_path %>
+                <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-edit") + "Add", root_path %>
               <% end %>
               <li class="divider"></li>
               <%= content_tag(:li) do %>
