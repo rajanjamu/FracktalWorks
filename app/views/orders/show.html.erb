@@ -27,7 +27,7 @@
               </tr>
               <tr>
                 <td>Delete</td>
-                <td><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-trash"), order_path(order), :method => :delete, data: {confirm: "Are you sure?"} %></td>
+                <td><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-trash"), order_path(@order), :method => :delete, data: {confirm: "Are you sure?"} %></td>
               </tr>
             </tbody>
           </table>
