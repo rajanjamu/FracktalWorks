@@ -1,0 +1,43 @@
+<div id="order-show">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 content">
+        <h2 class="title">Order</h2>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>Order ID</td>
+                <td><%= @order.id %></td>
+              </tr>
+              <tr>
+                <td>Title</td>
+                <td><%= @order.title %></td>
+              </tr>
+              <tr>
+                <td>Status</td>
+                <td><%= @order.status ? "Completed" : "Pending" %></td>
+              </tr>
+              <tr>
+                <td>Received</td>
+                <td><%= @order.created_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
+              </tr>
+              <tr>
+                <td>Last Updated</td>
+                <td><%= @order.updated_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
+              </tr>
+              <tr>
+                <td>Delete</td>
+                <td><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-trash"), "#" %></td>
+              </tr>
+            </tbody>
+          </table>
+          <%= simple_form_for @order do |f| %>
+            <%= f.input :status, label: 'Completed?', as: :boolean, checked_value: true, unchecked_value: false %>
+            <%= f.button :submit, class: "btn btn-default submit" %>
+          <% end %>
+
+          <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-arrow-left") + "Back", root_path %>
+      </div>
+    </div>
+  </div>
+</div>

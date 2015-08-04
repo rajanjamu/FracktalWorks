@@ -26,9 +26,21 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
+  def update
+    @order = Order.find(params[:id])
+    @order.update!(order_params)
+    redirect_to action: "index"
+  end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to action: "index"
+  end
+
   private
     def order_params
-      params.require(:order).permit(:title)
+      params.require(:order).permit(:title, :status)
     end
 
     def logged_in_user

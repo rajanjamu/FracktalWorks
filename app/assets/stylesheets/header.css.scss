@@ -1,6 +1,7 @@
 nav {
   &.navbar.navbar-default {
-    background-color: white;
+    background-color: $color-white;
+    border-radius: 0;
 
     .nav.navbar-nav {
       li {
