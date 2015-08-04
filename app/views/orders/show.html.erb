@@ -33,6 +33,7 @@
           </table>
           <%= simple_form_for @order do |f| %>
             <%= f.input :status, label: 'Completed?', as: :boolean, checked_value: true, unchecked_value: false %>
+            <%= f.input :completed, :as => :hidden, :input_html => { :value => DateTime.now } %>
             <%= f.button :submit, class: "btn btn-default submit" %>
           <% end %>
 

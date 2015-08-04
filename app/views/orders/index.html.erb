@@ -51,8 +51,15 @@
               <tr>
                 <td class="center"><%= order.id %></td>
                 <td><%= link_to order.title, order_path(order)  %></td>
-                <td><%= order.created_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
-                <td class="center"><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-trash"), "#" %></td>
+                <td>
+                  <% if order.completed == nil %>
+                    -
+                  <% else %>
+                    <%= order.completed.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %>
+                  <% end %>
+                </td>
+
+                <td class="center"><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-trash"), order_path(order), :method => :delete %></td>
               </tr>
             <% end %>
           <% end %>

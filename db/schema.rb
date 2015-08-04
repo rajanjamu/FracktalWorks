@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20150804175912) do
   create_table "orders", force: :cascade do |t|
     t.string   "title"
     t.boolean  "status"
-    t.date     "completed"
+    t.datetime "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

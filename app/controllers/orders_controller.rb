@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
 
   private
     def order_params
-      params.require(:order).permit(:title, :status)
+      params.require(:order).permit(:title, :status, :completed)
     end
 
     def logged_in_user
