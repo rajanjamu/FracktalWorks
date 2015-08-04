@@ -1,0 +1,26 @@
+#login, #signup, #forgotpass, #editpass {
+  // background: $color-clouds;
+  // margin-top: 18vh;
+  margin-top: 20px;
+
+  .content {
+    border: 1px solid $color-clouds;
+    // background: $color-clouds;
+    // padding-bottom: 20px;
+    padding: 10px 30px 20px 30px;
+    border-radius: 5px;
+
+    .title {
+      text-align: center;
+      margin: 10px auto 20px;
+
+      .glyphicon {
+        font-size: 1.3em;
+      }
+    }
+
+    .submit {
+      margin-bottom: 15px;
+    }
+  }
+}

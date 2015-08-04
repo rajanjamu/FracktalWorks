@@ -1,0 +1,15 @@
+nav {
+  &.navbar.navbar-default {
+    background-color: white;
+
+    .nav.navbar-nav {
+      li {
+        a {
+          .glyphicon {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
