@@ -26,6 +26,10 @@
                 <td><%= @order.updated_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
               </tr>
               <tr>
+                <td>Attachment</td>
+                <td><%= link_to @order.attachment_identifier, @order.attachment.url, target: "_blank" %></td>
+              </tr>
+              <tr>
                 <td>Delete</td>
                 <td><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-trash"), order_path(@order), :method => :delete, data: {confirm: "Are you sure?"} %></td>
               </tr>

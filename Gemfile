@@ -16,7 +16,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'unicorn'
 # gem 'capistrano-rails', group: :development
 # gem 'therubyracer', platforms: :ruby
-# gem 'carrierwave'
 # gem 'cloudinary'
 
 # Added manually
@@ -24,6 +23,7 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'devise'
+gem 'carrierwave'
 
 group :development, :test do
   gem 'sqlite3'

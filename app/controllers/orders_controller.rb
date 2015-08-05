@@ -18,10 +18,6 @@ class OrdersController < ApplicationController
     end
   end
 
-  def edit
-
-  end
-
   def show
     @order = Order.find(params[:id])
   end
@@ -40,7 +36,7 @@ class OrdersController < ApplicationController
 
   private
     def order_params
-      params.require(:order).permit(:title, :status, :completed)
+      params.require(:order).permit(:title, :status, :completed, :attachment)
     end
 
     def logged_in_user

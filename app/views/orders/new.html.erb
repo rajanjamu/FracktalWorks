@@ -6,6 +6,8 @@
           <%= simple_form_for @order do |f| %>
             <%= f.input :title %>
             <%= f.input :status, :as => :hidden, :input_html => { :value => false } %>
+            <%= f.label :attachment %>
+            <%= f.file_field :attachment, class: "attachment" %>
             <%= f.button :submit, class: "btn btn-default submit" %>
           <% end %>
 
