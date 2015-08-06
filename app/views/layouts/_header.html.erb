@@ -15,12 +15,14 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
-          <li><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-download-alt") + "New Order", new_order_path %></li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%=content_tag(:span, "", class: "glyphicon glyphicon-user") + current_user.email %> <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%=content_tag(:span, "", class: "glyphicon glyphicon-user") + current_user.name %> <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <%= content_tag(:li) do %>
-                <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-download-alt") + "New Order", new_order_path %>
+                <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-list") + "Dashboard", root_path %>
+              <% end %>
+              <%= content_tag(:li) do %>
+                <%= link_to content_tag(:span, "", class: "glyphicon glyphicon-cog") + "Manage", users_path %>
               <% end %>
               <li class="divider"></li>
               <%= content_tag(:li) do %>

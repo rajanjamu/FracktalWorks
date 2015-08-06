@@ -7,6 +7,7 @@ class OrdersController < ApplicationController
 
   def new
     @order = Order.new
+    @users = User.all
   end
 
   def create
@@ -36,7 +37,7 @@ class OrdersController < ApplicationController
 
   private
     def order_params
-      params.require(:order).permit(:title, :status, :completed, :attachment)
+      params.require(:order).permit(:title, :status, :completed, :attachment, :user_id)
     end
 
     def logged_in_user

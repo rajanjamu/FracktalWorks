@@ -24,6 +24,7 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'devise'
 gem 'carrierwave'
+gem 'cancancan', '~> 1.10'
 
 group :development, :test do
   gem 'sqlite3'

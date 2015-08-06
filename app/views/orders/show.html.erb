@@ -18,12 +18,21 @@
                 <td><%= @order.status ? "Completed" : "Pending" %></td>
               </tr>
               <tr>
+                <td>Assigned to</td>
+                <td><%= @order.user.name %></td>
+              </tr>
+              <tr>
                 <td>Received</td>
                 <td><%= @order.created_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
               </tr>
               <tr>
-                <td>Last Updated</td>
-                <td><%= @order.updated_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
+                <% if @order.status == true %>
+                  <td>Completed</td>
+                  <td><%= @order.completed.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
+                <% else %>
+                  <td>Last Updated</td>
+                  <td><%= @order.updated_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
+                <% end %>
               </tr>
               <tr>
                 <td>Attachment</td>

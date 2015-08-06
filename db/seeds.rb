@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(email: 'support@fracktal.in', password: 'Fra@Works', password_confirmation: 'Fra@Works')
-Order.create!(title: 'Dheer', status: false)
-Order.create!(title: 'Mihir', status: true, completed: DateTime.now)
+User.create!(name: "Admin",email: 'support@fracktal.in', password: 'Fra@Works', password_confirmation: 'Fra@Works')
+User.create!(name: "Rajan",email: 'rajan@fracktal.in', password: 'Fra@Works', password_confirmation: 'Fra@Works')
+
+Order.create!(title: 'Dheer', status: false, user_id: 1)
+Order.create!(title: 'Mihir', status: true, user_id: 1, completed: DateTime.now)

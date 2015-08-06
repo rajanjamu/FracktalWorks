@@ -1,0 +1,33 @@
+<div id="order-index">
+  <h3>Users</h3>
+
+  <br>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="center">ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Created</th>
+              <th class="center">Delete</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @users.each do |user| %>
+              <tr>
+                <td class="center"><%= user.id %></td>
+                <td><%= link_to user.name, user_path(user)  %></td>
+                <td><%= user.email %></td>
+                <td><%= user.created_at.in_time_zone("Chennai").strftime("%d/%m/%Y %I:%M %p") %></td>
+                <td class="center"><%= link_to content_tag(:span, "", class: "glyphicon glyphicon-trash"), user_path(user), :method => :delete, data: {confirm: "Are you sure?"} %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
